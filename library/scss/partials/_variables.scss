@@ -1,0 +1,78 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+
+$alert-yellow:      #ebe16f;
+$alert-red:         #fbe3e4;
+$alert-green:       #e6efc2;
+$alert-blue:        #d5edf8;
+
+$black:             #323944;
+$white:             #fff;
+
+$light-gray:        #f8f9fa;
+$gray:              #eaedf2;
+/*$text-color:        #5c6b80;*/
+$text-color:		#555555;
+$meta-gray:         #9fa6b4;
+
+$tan:               #eceee5;
+
+$green:             #7dd667;
+
+$bones-pink:        #f01d4f;
+$blue:              #2980b9;
+
+/*$link-color:        $bones-pink;
+$link-hover:        darken($link-color, 9%);*/
+
+
+
+$border-color:      #ccc;
+$disabled-gray:     #cfcfcf;
+
+
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+
+/**********************************
+Colors for Home school community project 
+***********************************/
+
+$purple:	purple;
+$darkpink:	#ff00ff;
+$orange:	#f89924;
+$darkblue:	#00549e;
+$green:		#c0d62d;
+$light-blue:	#1d8dcd;
+
+$body-background:	$light-blue;
+$main-header:		$green;
+$main-h1:			$orange;
+$main-h2:			$purple;
+$main-h3:			$darkpink;
+$main-menu:			$darkblue;	/* Also button text colors*/
+
+$main-footer:		#888888;
+
+$link-color:        $darkblue;
+$link-hover:        $darkpink;
+

@@ -1,0 +1,40 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+
+.wrap {
+  width: 1024px;
+}
+
+
+/*********************
+SIDEBARS & ASIDES
+*********************/
+
+.sidebar {
+		
+	#email,
+	#name {
+		width:100%;
+		margin-bottom:0;
+	}
+}
+
+
+
+.team-bio {
+    	.teacher-picture {
+    		background-color:yellow;
+    	}
+    	
+    	.teacher-text {
+    		display:none;
+    	}
+    }
