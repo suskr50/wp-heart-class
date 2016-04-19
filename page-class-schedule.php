@@ -12,11 +12,13 @@
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					<header class="article-header">
 
-
+	<h1 class="page-title"><?php the_title(); ?></h1>
+	
 
 
 					</header> <?php // end article header ?>
-
+<div class="m-all t-all d-5of7 cf">
+									
 					<section class="entry-content cf" itemprop="articleBody">
 						<?php
 										// the content (pretty self explanatory huh)
@@ -43,43 +45,54 @@
 											?>
 										</section> <?php // end article section ?>
 
-										
+										<footer class="article-footer cf">
+
+										</footer>
 
 										<?php comments_template(); ?>
 									<?php endwhile; endif; ?>	
 
-									<?php get_sidebar('sidebar2'); ?>	
-								</article>
+									
+								</div>
 
-								<aside class="entry-content cf">
+								<section >
+											
 
-
-
-									<div class="m-all t-all d-5of7 cf">
-										<section class="announcments">	<hr>
-											<h1> Announcements </h1>
-
-											<?php query_posts('posts_per_page=3')?>
+											<?php query_posts('posts_per_page=3&post_type=custom2_type')?>
 											<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-												<div class="announce-wrap cf">
+												<?php  $class_day = get_field('class_day');
+												$class_time = get_field('class_time');
+												$post_object = get_field('teacher');?>
 
-													<div class="announce-picture ">
-														<?php the_post_thumbnail();?>
-													</div>
 
-													<div class="announce-article">
+												<h1><?php echo $class_day."  ".$class_time ?></h1>
 
-													<div class="announce-title">
-														<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
-													</div>	
+												
 
-													<div class="announce-text">
-														<?php the_excerpt(); ?>
-													</div>
-													</div>
+												<?php														
 													
-												</div>
+													if( $post_object ): 
+															// override $post
+														$post = $post_object;
+														setup_postdata( $post ); 
+														?>
+														<div class="teacher-classes">
+															<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+														</div>
+													<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+													<?php endif;
+												
+													 // end while ?>
+											
+												
+													<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+													
+
+													
+								
+
+																
 												
 
 
@@ -87,16 +100,10 @@
 										<?php endif; ?>	
 									</section>
 
-									<footer class="article-footer cf">
-
-										</footer>
-
-								</div>
-
 								<?php get_sidebar(); ?>	
 
-								<aside>
-
+								
+</article>
 						</main>
 
 

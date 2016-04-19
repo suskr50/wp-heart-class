@@ -331,7 +331,11 @@ POSTS & CONTENT STYLES
 		/* want to style individual post classes? Booya! */
 		.post-id {}         /* post by id (i.e. post-3) */
 		.post {}            /* general post style */
-		.page {}            /* general article on a page style */
+		.page {
+
+
+
+			}            /* general article on a page style */
 		.attachment {}      /* general style on an attatchment */
 		.sticky {}          /* sticky post style */
 		.hentry {}          /* hentry class */
@@ -1112,6 +1116,48 @@ Sign Up Form
 	}
 
 }  
+
+/*********************
+Class Schedule Form
+*********************/
+.page-class-schedule {
+	.day-wrapper {
+    width:100%;
+    padding:10px;
+   
+}
+.individual-class {
+   
+  
+}
+.class-name {
+    width:40%;
+    float:left;
+}
+
+.class-name p {
+     font-size:1.125rem; 
+     text-align:left;
+  
+}
+
+.move-over {
+    padding-left:10px;
+}
+
+.see-input {
+
+    float:left;
+    padding-left: 4%;
+}
+
+.see-input .btn {
+    text-transform:none;
+    font-size:1rem;
+    height:75%;
+    margin-top:10px;
+}
+}
 
 
 
