@@ -158,6 +158,10 @@ h5, .h5 {
 	letter-spacing: 2px;
 }
 
+hr {
+	color:$border-color;
+}
+
 
 .btn {
 	background-color:$green;
@@ -281,7 +285,7 @@ POSTS & CONTENT STYLES
 *********************/
 
 #main {
-	background-color:yellow;
+	background-color:white;
 }
 
 #content {
@@ -992,21 +996,29 @@ Home Page STYLES
 
 	h1 {
 		text-align:center;
+
 	}
-	.announce-title {
+
+	a {
+		text-decoration:none;
+	}
+
+
+	.announce-picture {
 		width:50%;
-		float:right;
-		
-	}
-	announce-picture{
-		width:25%;
 		float:left;
-		
 	}
+
+	.announc-title {
+		width:50%;
+		float:left;
+	}
+
+
 	.announce-text {
-	
-		display:none;
+	 	display:none;
 	}
+	
 }
 
 /*********************

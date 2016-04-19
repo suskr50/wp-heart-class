@@ -1,26 +1,26 @@
 <?php get_header(); ?>
 
-			<div id="content">
+<div id="content">
 
-				<div id="inner-content" class="wrap cf">
+	<div id="inner-content" class="wrap cf">
 
-						<main id="main" class="m-all t-all d-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-
-							
-
-							<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-								<header class="article-header">
-
-								
+		<main id="main" class="m-all t-all d-all cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 
-								</header> <?php // end article header ?>
 
-								<section class="entry-content cf" itemprop="articleBody">
-									<?php
+			<article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+					<header class="article-header">
+
+
+
+
+					</header> <?php // end article header ?>
+
+					<section class="entry-content cf" itemprop="articleBody">
+						<?php
 										// the content (pretty self explanatory huh)
-										the_content();
+						the_content();
 
 										/*
 										 * Link Pages is used in case you have posts that are set to break into
@@ -39,51 +39,61 @@
 											'after'       => '</div>',
 											'link_before' => '<span>',
 											'link_after'  => '</span>',
-										) );
-									?>
-								</section> <?php // end article section ?>
+											) );
+											?>
+										</section> <?php // end article section ?>
 
-								<footer class="article-footer cf">
+										<footer class="article-footer cf">
 
-								</footer>
+										</footer>
 
-								<?php comments_template(); ?>
-<?php endwhile; endif; ?>	
+										<?php comments_template(); ?>
+									<?php endwhile; endif; ?>	
 
-<?php get_sidebar('sidebar2'); ?>	
-							</article>
+									<?php get_sidebar('sidebar2'); ?>	
+								</article>
 
-						<aside >
+								<aside class="entry-content cf">
 
-					
 
-						<div class="m-all t-all d-5of7 cf">
-						<section class="announcments">	<hr>
-										<h1> Announcements </h1>
-										<?php query_posts('posts_per_page=3')?>
-										<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-											<div class="announce-title">
-												<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></ h2></a>
-											</div>		
-											<div class="announce-picture">
-												<?php the_post_thumbnail();?>
-											</div>
-											
-											<div class="announce-text">
-												<?php the_excerpt(); ?>
-											</div>
-										
-							
-									<?php endwhile; else : ?>
-<?php endif; ?>	
+									<div class="m-all t-all d-5of7 cf">
+										<section class="announcments">	<hr>
+											<h1> Announcements </h1>
+
+											<?php query_posts('posts_per_page=3')?>
+											<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+												<div class="announce-wrap cf">
+
+													<div class="announce-picture ">
+														<?php the_post_thumbnail();?>
+													</div>
+
+													<div class="announce-article">
+
+													<div class="announce-title">
+														<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
+													</div>	
+
+													<div class="announce-text">
+														<?php the_excerpt(); ?>
+													</div>
+													</div>
+													
+												</div>
+												
+
+
+											<?php endwhile; else : ?>
+										<?php endif; ?>	
 									</section>
 
 								</div>
 
-						<?php get_sidebar(); ?>	
+								<?php get_sidebar(); ?>	
 
-						<aside>
+								<aside>
 
 						</main>
 

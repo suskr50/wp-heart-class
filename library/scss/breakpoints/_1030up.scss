@@ -19,6 +19,10 @@ SIDEBARS & ASIDES
 *********************/
 
 .sidebar {
+
+	hr {
+	display:none;
+	}
 		
 	#email,
 	#name {
@@ -38,3 +42,53 @@ SIDEBARS & ASIDES
     		display:none;
     	}
     }
+
+/*********************
+Home Page STYLES
+*********************/
+
+.announcments{
+
+	border-right:2px solid $border-grey;
+
+	hr {
+		display:none
+	}
+	
+	
+	.announce-picture {
+		width:25%;
+		float:left;
+		margin-top:35px;
+
+		img {
+		margin: 0 0 0;
+		}
+		
+	}
+
+	.announc-article {
+		width:70%;
+		float:left;
+	}
+
+	.announc-title {
+
+		width:100%;
+		float:left;
+	}
+
+
+	.announce-text {
+	 	display:block;
+	}
+
+
+	
+}
+
+	
+
+
+	
+

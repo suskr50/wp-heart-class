@@ -456,6 +456,21 @@ mobile. Make sure to double check these!
 Home Page STYLES
 *********************/
 /* line 329, ../scss/breakpoints/_768up.scss */
+.announcments h1 {
+  text-align: left;
+}
+/* line 335, ../scss/breakpoints/_768up.scss */
+.announcments .announce-picture {
+  width: 23%;
+  float: left;
+  margin-top: 35px;
+}
+/* line 341, ../scss/breakpoints/_768up.scss */
+.announcments .announc-title {
+  width: 70%;
+  float: left;
+}
+/* line 348, ../scss/breakpoints/_768up.scss */
 .announcments .announce-text {
   display: block;
 }
@@ -463,12 +478,12 @@ Home Page STYLES
 /*********************
 About Page STYLES
 *********************/
-/* line 342, ../scss/breakpoints/_768up.scss */
+/* line 367, ../scss/breakpoints/_768up.scss */
 .page-test-about .address {
   width: 40%;
   float: left;
 }
-/* line 347, ../scss/breakpoints/_768up.scss */
+/* line 372, ../scss/breakpoints/_768up.scss */
 .page-test-about .map-container {
   position: relative;
   padding-bottom: 37.5%;
@@ -478,7 +493,7 @@ About Page STYLES
   width: 50%;
   margin-bottom: 20px;
 }
-/* line 358, ../scss/breakpoints/_768up.scss */
+/* line 383, ../scss/breakpoints/_768up.scss */
 .page-test-about .map-container iframe {
   position: absolute;
   top: 0;
@@ -486,23 +501,23 @@ About Page STYLES
   width: 100%;
   height: 100%;
 }
-/* line 371, ../scss/breakpoints/_768up.scss */
+/* line 396, ../scss/breakpoints/_768up.scss */
 .page-test-about .team-bio .teacher-picture {
   background-color: green;
   clear: both;
   display: inline-block;
   text-align: center;
 }
-/* line 377, ../scss/breakpoints/_768up.scss */
+/* line 402, ../scss/breakpoints/_768up.scss */
 .page-test-about .team-bio .teacher-title {
   clear: both;
   text-align: center;
 }
-/* line 381, ../scss/breakpoints/_768up.scss */
+/* line 406, ../scss/breakpoints/_768up.scss */
 .page-test-about .team-bio .teacher-title .teacher-classes a {
   text-transform: lowercase;
 }
-/* line 386, ../scss/breakpoints/_768up.scss */
+/* line 411, ../scss/breakpoints/_768up.scss */
 .page-test-about .team-bio .teacher-text {
   display: none;
 }
@@ -510,11 +525,11 @@ About Page STYLES
 /*********************
 Sign Up Form
 *********************/
-/* line 397, ../scss/breakpoints/_768up.scss */
+/* line 422, ../scss/breakpoints/_768up.scss */
 .page-sign-up h1 {
   text-align: left;
 }
-/* line 401, ../scss/breakpoints/_768up.scss */
+/* line 426, ../scss/breakpoints/_768up.scss */
 .page-sign-up #name-label,
 .page-sign-up #email-label,
 .page-sign-up #class-lable {
@@ -522,7 +537,7 @@ Sign Up Form
   width: 48%;
   float: left;
 }
-/* line 417, ../scss/breakpoints/_768up.scss */
+/* line 442, ../scss/breakpoints/_768up.scss */
 .page-sign-up input[type="submit"] {
   width: 50%;
 }
@@ -546,19 +561,59 @@ be seen on the Desktop.
 SIDEBARS & ASIDES
 *********************/
 /* line 23, ../scss/breakpoints/_1030up.scss */
+.sidebar hr {
+  display: none;
+}
+/* line 27, ../scss/breakpoints/_1030up.scss */
 .sidebar #email,
 .sidebar #name {
   width: 100%;
   margin-bottom: 0;
 }
 
-/* line 33, ../scss/breakpoints/_1030up.scss */
+/* line 37, ../scss/breakpoints/_1030up.scss */
 .team-bio .teacher-picture {
   background-color: yellow;
 }
-/* line 37, ../scss/breakpoints/_1030up.scss */
+/* line 41, ../scss/breakpoints/_1030up.scss */
 .team-bio .teacher-text {
   display: none;
+}
+
+/*********************
+Home Page STYLES
+*********************/
+/* line 50, ../scss/breakpoints/_1030up.scss */
+.announcments {
+  border-right: 2px solid #dedede;
+}
+/* line 54, ../scss/breakpoints/_1030up.scss */
+.announcments hr {
+  display: none;
+}
+/* line 59, ../scss/breakpoints/_1030up.scss */
+.announcments .announce-picture {
+  width: 25%;
+  float: left;
+  margin-top: 35px;
+}
+/* line 64, ../scss/breakpoints/_1030up.scss */
+.announcments .announce-picture img {
+  margin: 0 0 0;
+}
+/* line 70, ../scss/breakpoints/_1030up.scss */
+.announcments .announc-article {
+  width: 70%;
+  float: left;
+}
+/* line 75, ../scss/breakpoints/_1030up.scss */
+.announcments .announc-title {
+  width: 100%;
+  float: left;
+}
+/* line 82, ../scss/breakpoints/_1030up.scss */
+.announcments .announce-text {
+  display: block;
 }
 
 /*
