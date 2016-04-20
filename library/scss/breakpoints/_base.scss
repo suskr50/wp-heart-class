@@ -1121,7 +1121,15 @@ Sign Up Form
 Class Schedule Form
 *********************/
 .page-class-schedule {
-	.day-wrapper {
+
+h2 { text-decoration:underline;
+    color:#ff00ff;
+    margin: 0px;
+}
+
+
+
+.day-wrapper {
     width:100%;
     padding:10px;
    
@@ -1130,8 +1138,15 @@ Class Schedule Form
    
   
 }
+
+.time {
+	width:30%;
+	float:left;
+
+}
+
 .class-name {
-    width:40%;
+    width:30%;
     float:left;
 }
 
@@ -1145,17 +1160,21 @@ Class Schedule Form
     padding-left:10px;
 }
 
-.see-input {
-
-    float:left;
-    padding-left: 4%;
+.btn{
+	width:30%;
+	float:left;
+	padding-top:10px;
+	margin-top:10px;
 }
 
-.see-input .btn {
+
+ a {
+	text-decoration:none;
     text-transform:none;
-    font-size:1rem;
-    height:75%;
-    margin-top:10px;
+    font-size:1em;
+ 
+   
+  
 }
 }
 

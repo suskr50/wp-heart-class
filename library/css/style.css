@@ -2357,36 +2357,48 @@ Sign Up Form
 /*********************
 Class Schedule Form
 *********************/
-/* line 1124, ../scss/breakpoints/_base.scss */
+/* line 1125, ../scss/breakpoints/_base.scss */
+.page-class-schedule h2 {
+  text-decoration: underline;
+  color: #ff00ff;
+  margin: 0px;
+}
+/* line 1132, ../scss/breakpoints/_base.scss */
 .page-class-schedule .day-wrapper {
   width: 100%;
   padding: 10px;
 }
-/* line 1133, ../scss/breakpoints/_base.scss */
-.page-class-schedule .class-name {
-  width: 40%;
+/* line 1142, ../scss/breakpoints/_base.scss */
+.page-class-schedule .time {
+  width: 30%;
   float: left;
 }
-/* line 1138, ../scss/breakpoints/_base.scss */
+/* line 1148, ../scss/breakpoints/_base.scss */
+.page-class-schedule .class-name {
+  width: 30%;
+  float: left;
+}
+/* line 1153, ../scss/breakpoints/_base.scss */
 .page-class-schedule .class-name p {
   font-size: 1.125rem;
   text-align: left;
 }
-/* line 1144, ../scss/breakpoints/_base.scss */
+/* line 1159, ../scss/breakpoints/_base.scss */
 .page-class-schedule .move-over {
   padding-left: 10px;
 }
-/* line 1148, ../scss/breakpoints/_base.scss */
-.page-class-schedule .see-input {
+/* line 1163, ../scss/breakpoints/_base.scss */
+.page-class-schedule .btn {
+  width: 30%;
   float: left;
-  padding-left: 4%;
-}
-/* line 1154, ../scss/breakpoints/_base.scss */
-.page-class-schedule .see-input .btn {
-  text-transform: none;
-  font-size: 1rem;
-  height: 75%;
+  padding-top: 10px;
   margin-top: 10px;
+}
+/* line 1171, ../scss/breakpoints/_base.scss */
+.page-class-schedule a {
+  text-decoration: none;
+  text-transform: none;
+  font-size: 1em;
 }
 
 /*********************

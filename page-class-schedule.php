@@ -55,50 +55,88 @@
 									
 								</div>
 
+
 								<section >
-											
 
-											<?php query_posts('posts_per_page=3&post_type=custom2_type')?>
-											<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+									<?php 
 
-												<?php  $class_day = get_field('class_day');
-												$class_time = get_field('class_time');
-												$post_object = get_field('teacher');?>
+									$a = array('Monday','Tuesday','Wednesday','Thursday','Friday');
+									foreach ($a as $day) {
+
+									$args = array(
+										'posts_per_page'	=> -1,
+										'post_type'		=> 'custom2_type',
+										'meta_key'		=> 'class_day',
+										'meta_value'	=> $day
+										);
+								
+
+									$the_query = new WP_Query( $args );
+
+									?>
+									<?php if( $the_query->have_posts() ): ?>
+										
+
+										<h2> <?php echo $day; ?></h2>
+									
+
+										
+										<?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+											<?php  $class_day = get_field('class_day');
+											$class_time = get_field('class_time');
+											$post_object = get_field('teacher');
+											$url = get_the_permalink();
+											$class_name = get_the_title();
 
 
-												<h1><?php echo $class_day."  ".$class_time ?></h1>
 
-												
-
-												<?php														
-													
-													if( $post_object ): 
+											if( $post_object ): 
 															// override $post
 														$post = $post_object;
 														setup_postdata( $post ); 
+														$teacher_name = get_the_title();
+														
 														?>
-														<div class="teacher-classes">
-															<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-														</div>
-													<?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+														
+													<?php wp_reset_postdata();?>
 													<?php endif;
 												
 													 // end while ?>
+
+											<div class="individual-class cf">
+														<div class="time">
+															<p> <?php echo $class_time; ?></p>
+														</div>
+											             <div class="class-name">
+											                 <p><strong> <?php echo $class_name; ?></strong><br><em><?php echo $teacher_name; ?></em></p>
+											             </div>
+											             <div class="btn">
+											             	
+											                 <a href="<?php echo $url; ?>">See Details</a>
+											                 
+											             </div>
+											             <div class="clear"></div>
+
+											         </div>
 											
-												
-													<a href="<?php the_permalink(); ?>"><h2><?php the_title(); ?></h2></a>
-													
+										
+											
+											
 
-													
-								
 
-																
 												
 
+											<?php endwhile; ?>
+										
+									<?php endif; ?>
 
-											<?php endwhile; else : ?>
-										<?php endif; ?>	
-									</section>
+									<?php wp_reset_query();	?>
+
+
+									<?php } ?> 
+								</section>
+
+							
 
 								<?php get_sidebar(); ?>	
 
